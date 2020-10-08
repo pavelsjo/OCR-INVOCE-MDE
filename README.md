@@ -16,8 +16,8 @@ Para su funcionamiento se deben instalar las siguientes dependencias:
 ## Instalar ImageMagick en Red Hat 4.8.5-16.0.3
 
 ```Shel
-yum update
-yum install ImageMagick-devel
+sudo yum update
+sudo yum install ImageMagick-devel
 /usr/bin/yum --enablerepo epel-testing install tesseract.x86_64 tesseract-langpack-fra.noarch
 ```
 
