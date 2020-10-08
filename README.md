@@ -2,7 +2,8 @@
 
 El siguiente código permite extraer los metadatos de una `factura escaneada` y almacenada en formato `.pdf`, por ejemplo:
 
-![Ejemplo Factura]("./raw/factura_001.gpg")
+<img src="./raw/factura_001.jpg"
+alt="Ejemplo Factur" title="Ejemplo Factura" width="200" height="300" />
 
 |INVOICE|DATE|TOTAL DUE|
 |--|--|--|
