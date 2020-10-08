@@ -34,3 +34,4 @@ pip install -r requeriments.txt
 ## Referencias
 
 - [Installing Tesseract-OCR on CentOS 6](https://stackoverflow.com/questions/23792373/installing-tesseract-ocr-on-centos-6)
+- [Enable snaps on Red Hat Enterprise Linux and install tesseract](https://snapcraft.io/install/tesseract/rhel)
