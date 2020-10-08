@@ -1,0 +1,2 @@
+wand==0.6.3
+pytesseract==0.3.6
