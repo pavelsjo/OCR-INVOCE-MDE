@@ -28,7 +28,7 @@ Para la instalación en otras distribuciones, por favor revisa la [documentació
 Este código fué probado con `python3.6` y requiere instalar los siguientes paquetes:
 
 ```Shell
-pip install requeriments.txt
+pip install -r requeriments.txt
 ```
 
 ## Referencias
