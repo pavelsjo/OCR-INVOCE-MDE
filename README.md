@@ -9,19 +9,30 @@ alt="Ejemplo Factur" title="Ejemplo Factura" width="400" height="500" />
 |--|--|--|
 1989|09/12/2005|1.596.097
 
-Para la extración se hace un preprocesamiento con `ImageMagick`, se convierten los caracteres a texto plano con `pytesseract`, luego, se utilizan expresiones regulares para extraer los metadatos y finalmente el resultado queda en formato json.
+La ejecución se inicia con un pre-procesamiento con `ImageMagick`, luego, se convierten los caracteres a texto plano con `pytesseract` y se utilizan `regex` para extraer los metadatos; finalmente el resultado queda en formato json.
 
-Para su funcionamiento se deben instalar las siguientes dependencias:
+Para utilizarlo se deben instalar las siguientes dependencias:
 
 ## Instalar ImageMagick en Red Hat 4.8.5-16.0.3
 
 ```Shel
-sudo yum update
-sudo yum install ImageMagick-devel
-/usr/bin/yum --enablerepo epel-testing install tesseract.x86_64 tesseract-langpack-fra.noarch
+sudo yum -y update 
+sudo yum -y install ImageMagick-devel
 ```
 
 Para la instalación en otras distribuciones, por favor revisa la [documentación oficial](https://docs.wand-py.org/en/latest/guide/install.html).
+
+## Instalar Tesseract en Red Hat RHEL 7 
+
+```Shell
+sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
+sudo yum -y update
+sudo yum -y install snapd
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+sudo /usr/bin/yum --enablerepo epel-testing -y install tesseract.x86_64 tesseract-langpack-fra.noarch
+```
 
 ## Librerías python
 
@@ -33,5 +44,5 @@ pip install -r requeriments.txt
 
 ## Referencias
 
-- [Installing Tesseract-OCR on CentOS 6](https://stackoverflow.com/questions/23792373/installing-tesseract-ocr-on-centos-6)
 - [Enable snaps on Red Hat Enterprise Linux and install tesseract](https://snapcraft.io/install/tesseract/rhel)
+- [Installing Tesseract-OCR on CentOS 6](https://stackoverflow.com/questions/23792373/installing-tesseract-ocr-on-centos-6)
