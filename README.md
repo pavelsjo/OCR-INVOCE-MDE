@@ -2,8 +2,7 @@
 
 El siguiente código permite extraer los metadatos de una `factura escaneada` y almacenada en formato `.pdf`, por ejemplo:
 
-<img src="./raw/factura_001.jpg"
-alt="Ejemplo Factur" title="Ejemplo Factura" width="400" height="500" />
+<img src="./raw/factura_001.png" alt="Ejemplo Factura" title="Ejemplo Factura" width="400" height="500" />
 
 |INVOICE|DATE|TOTAL DUE|
 |--|--|--|
@@ -34,6 +33,12 @@ sudo ln -s /var/lib/snapd/snap /snap
 sudo /usr/bin/yum --enablerepo epel-testing -y install tesseract.x86_64 tesseract-langpack-fra.noarch
 ```
 
+## Version Alternativa
+
+```Shell
+sudo yum install install poppler-utils
+```
+
 ## Librerías python
 
 Este código fué probado con `python3.6` y requiere instalar los siguientes paquetes:
@@ -46,3 +51,6 @@ pip install -r requeriments.txt
 
 - [Enable snaps on Red Hat Enterprise Linux and install tesseract](https://snapcraft.io/install/tesseract/rhel)
 - [Installing Tesseract-OCR on CentOS 6](https://stackoverflow.com/questions/23792373/installing-tesseract-ocr-on-centos-6)
+- [Poppler in path for pdf2image](https://stackoverflow.com/questions/53481088/poppler-in-path-for-pdf2image)
+- [pdf2image-github](https://github.com/Belval/pdf2image)
+- [pdf2image-pypi](https://pypi.org/project/pdf2image/)
